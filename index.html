@@ -654,9 +654,8 @@ function startExercise(){
 function startNew(){equations=makeEquations();current=0;log=[];runScore=0;show('sc-eq');showQuestion()}
 
 // ══ KEYBOARD ══
-document.getElementById('name-input').addEventListener('input',function(){
-  document.getElementById('start-btn').disabled=this.value.trim().length<2;
-});
+function updateStartBtn(){document.getElementById('start-btn').disabled=document.getElementById('name-input').value.trim().length<2;}
+['input','keyup','change','compositionend'].forEach(ev=>document.getElementById('name-input').addEventListener(ev,updateStartBtn));
 document.getElementById('name-input').addEventListener('keypress',function(e){
   if(e.key==='Enter'&&!document.getElementById('start-btn').disabled)startExercise();
 });
