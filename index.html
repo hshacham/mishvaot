@@ -386,7 +386,7 @@ function genTwoFracs(){
     const q1=rnd(2,4),p1=rnd(-6,6);if(p1===0)continue;
     if(gcd(Math.abs(p1),q1)!==1)continue;
     const q2=rnd(2,4),p2=rnd(-6,6);if(p2===0)continue;
-   2if(gcd(Math.abs(p2),q2)!==1)continue;
+    if(gcd(Math.abs(p2),q2)!==1)continue;
     if(p1*q2===p2*q1)continue;
     const a=q1*q2,b=-(p2*q1+p1*q2),c=p1*p2;
     if(Math.abs(a)>12||Math.abs(b)>16||Math.abs(c)>16)continue;
