@@ -521,7 +521,7 @@ function showFeedback(correct,eq,sAns){
   document.getElementById('fb-icon').textContent=correct?'✅':'❌';
   document.getElementById('fb-main').textContent=correct?'נכון!':'לא נכון';
   if(!correct){
-  2 document.getElementById('fb-detail').textContent='התשובה הנכונה: '+fmtCorrect(eq);
+    document.getElementById('fb-detail').textContent='התשובה הנכונה: '+fmtCorrect(eq);
   }else{
     document.getElementById('fb-detail').textContent='';
   }
